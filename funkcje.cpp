@@ -11,10 +11,10 @@ void WyswietlMENU()
     hOut = GetStdHandle(STD_OUTPUT_HANDLE);
     SetConsoleTextAttribute(hOut, FOREGROUND_BLUE | FOREGROUND_INTENSITY);
     cout << "\t\t*Kalkulator*" << endl;         
-    cout << "\t0. WyjdŸ" << endl;
+    cout << "\t0. WyjdÅº" << endl;
     cout << "\t1. Dodawanie" << endl;
     cout << "\t2. Odejmowanie" << endl;
-    cout << "\t3. Mno¿enie" << endl;
+    cout << "\t3. MnoÅ¼enie" << endl;
     cout << "\t4. Dzielenie" << endl;
     cout << "\t5. Miejsca zerowe" << endl;
     cout << "\t6. Modulo" << endl;
@@ -25,10 +25,10 @@ void WyswietlMENU()
 int Wybor(char WyborDzialania, float a, float b,float A,float B, float C, float D, float m1, float m2)
 {
     WyborDzialania=_getch();
-    if (WyborDzialania == '0') cout << "Dziêkujê za skorzystanie z kalkulatora\n\tWykona³:\n\tZbigniew Kuligowski\n\t228422" << endl << endl;
+    if (WyborDzialania == '0') cout << "DziÄ™kujÄ™ za skorzystanie z kalkulatora\n\tWykonaÅ‚:\n\tZbigniew Kuligowski\n\t228422" << endl << endl;
     if (WyborDzialania == '1') cout << "\t1. Dodawanie" << endl << endl;
-    if (WyborDzialania == '2') cout << "\t1. Dodawanie" << endl << endl;
-    if (WyborDzialania == '3') cout << "\t3. Mno¿enie" << endl << endl;
+    if (WyborDzialania == '2') cout << "\t2. Odejmowanie" << endl << endl;
+    if (WyborDzialania == '3') cout << "\t3. MnoÅ¼enie" << endl << endl;
     if (WyborDzialania == '4') cout << "\t4. Dzielenie" << endl << endl;
     if (WyborDzialania == '5') cout << "\t5. Miejsca zerowe" << endl << endl;
     if (WyborDzialania == '6') cout << "\t6. Modulo" << endl << endl;
@@ -38,34 +38,34 @@ int Wybor(char WyborDzialania, float a, float b,float A,float B, float C, float 
     if (WyborDzialania == '0') exit(0);
     if (WyborDzialania > '0' && WyborDzialania < '5' || WyborDzialania == '6')
     {
-        cout << "Podaj 1 liczbê:\t";
+        cout << "Podaj 1 liczbÄ™:\t";
         cin >> a;
-        cout << "Podaj 2 liczbê:\t";
+        cout << "Podaj 2 liczbÄ™:\t";
         cin >> b;
     }
     else if (WyborDzialania == '5')
     {
-        cout << "Podaj wspó³czynnik A trójmianu kwadratowego:\t";
+        cout << "Podaj wspÃ³Å‚czynnik A trÃ³jmianu kwadratowego:\t";
         cin >> A;
-        cout << "Podaj wspó³czynnik B trójmianu kwadratowego\t";
+        cout << "Podaj wspÃ³Å‚czynnik B trÃ³jmianu kwadratowego\t";
         cin >> B;
-        cout << "Podaj wspó³czynnik B trójmianu kwadratowego:\t";
+        cout << "Podaj wspÃ³Å‚czynnik B trÃ³jmianu kwadratowego:\t";
         cin >> C;
     }
     else if (WyborDzialania == '7')
     {
-        cout << "Podaj k¹t w stopniach" << endl;
+        cout << "Podaj kÄ…t w stopniach" << endl;
         cin >> a;
     }
      else if (WyborDzialania == '8')
     {
-        cout << "Podaj liczbê logarytmowan¹" << endl;
+        cout << "Podaj liczbÄ™ logarytmowanÄ…" << endl;
         cin >> a;
     }
      else
     {
         SetConsoleTextAttribute(hOut, FOREGROUND_RED | FOREGROUND_INTENSITY);
-        cout << "Wybra³eœ nieprawid³owe dzia³anie!\n\n";
+        cout << "WybraÅ‚eÅ› nieprawidÅ‚owe dziaÅ‚anie!\n\n";
         SetConsoleTextAttribute(hOut, FOREGROUND_BLUE | FOREGROUND_INTENSITY);
     }
     switch (WyborDzialania)
@@ -89,7 +89,7 @@ int Wybor(char WyborDzialania, float a, float b,float A,float B, float C, float 
     case '7':
         wyswietl(Sinus(a));     break;
     case '8':
-        if (a <= 0) cout << "Liczba logarytmowana musi byæ wiêksza od zera!" << endl <<endl;
+        if (a <= 0) cout << "Liczba logarytmowana musi byÄ‡ wiÄ™ksza od zera!" << endl <<endl;
         else wyswietl(Logarytm_Naturalny(a));    break;
     }
 }
@@ -127,15 +127,15 @@ float miejsce_zerowe2(float x, float y, float z)
 }
 void wyswietl_miejsca_zerowe(float x, float y, float z)
 {
-    if (z < 0) cout << "Brak rozwi¹zañ" << endl << endl;
+    if (z < 0) cout << "Brak rozwiÄ…zaÅ„" << endl << endl;
     else if (z == 0)
     {
-        cout << "\nRozwi¹zaniem jest jedno miejsce zerowe" << endl;
+        cout << "\nRozwiÄ…zaniem jest jedno miejsce zerowe" << endl;
         wyswietl(x);
     }
     else if (z > 0)
     {
-        cout << "\nRozwi¹zaniem sa dwa miejsca zerowe" << endl<< endl;
+        cout << "\nRozwiÄ…zaniem sa dwa miejsca zerowe" << endl<< endl;
         wyswietl(x);
         wyswietl(y);
     }
